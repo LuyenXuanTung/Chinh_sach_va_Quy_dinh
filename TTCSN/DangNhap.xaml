@@ -1,0 +1,75 @@
+﻿<Window x:Class="TTCSN.DangNhap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TTCSN"
+        mc:Ignorable="d"
+        Title="Đăng nhập" Height="410" Width="700">
+    <Grid>
+        <Grid>
+            <TabControl x:Name="dnControl" >
+                <TabItem Header="Đăng nhập nhân viên" Height="20" VerticalAlignment="Top">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="Trang nhân viên" FontSize="30" HorizontalAlignment="Center" Margin="0,10,0,5"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Margin="20,37,20,10" HorizontalAlignment="Center" >Mã nhân viên</TextBlock>
+                        <TextBox x:Name="txtTenDNND" Grid.Column="1" Grid.Row="1" Margin="0,27,0,10" HorizontalAlignment="Left" Width="441" Height="40"></TextBox>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Margin="20,37,20,10" HorizontalAlignment="Center" >Mật khẩu</TextBlock>
+                        <PasswordBox x:Name="txtMKND" Grid.Column="1" Grid.Row="2" Margin="0,27,0,10" HorizontalAlignment="Left" Width="441" Height="40"/>
+                        <StackPanel Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+                            <Button x:Name="quenMKND" Width="150" Height="25" HorizontalAlignment="Left" Margin="490,5,5,5" Click="quenMKND_Click">Quên mật khẩu</Button>
+
+                        </StackPanel>
+
+                        <WrapPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button Height="40" Width="119" Content="Đăng nhập" Margin="70,10,10,5" Click="DNND_Click" />
+                        </WrapPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Đăng nhập trang quản trị" Height="20" VerticalAlignment="Top">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="Trang quản trị viên" FontSize="30" HorizontalAlignment="Center" Margin="0,10,0,5"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Margin="20,37,20,10" HorizontalAlignment="Center" >Tên đăng nhập</TextBlock>
+                        <TextBox x:Name="txtTenDN" Grid.Column="1" Grid.Row="1" Margin="0,27,0,10" HorizontalAlignment="Left" Width="441" Height="40"></TextBox>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Margin="20,37,20,10" HorizontalAlignment="Center" >Mật khẩu</TextBlock>
+                        <PasswordBox x:Name="txtMK" Grid.Column="1" Grid.Row="2" Margin="0,27,0,10" HorizontalAlignment="Left" Width="441" Height="40"/>
+                        <StackPanel Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+                            <Button x:Name="quenMK" Width="150" Height="25" HorizontalAlignment="Left" Margin="490,5,5,5" Click="quenMK_Click">Quên mật khẩu</Button>
+
+                        </StackPanel>
+
+                        <WrapPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button Height="40" Width="119" Content="Đăng nhập" Margin="70,10,10,5" Click="DNADMIN_Click" />
+                        </WrapPanel>
+                    </Grid>
+                </TabItem>
+                
+            </TabControl>
+        </Grid>
+            
+        
+        
+    </Grid>
+</Window>

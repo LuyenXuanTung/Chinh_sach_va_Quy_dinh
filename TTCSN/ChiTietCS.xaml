@@ -1,0 +1,41 @@
+﻿<Window x:Class="TTCSN.ChiTietCS"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TTCSN"
+        mc:Ignorable="d"
+        Title="Chi tiết chính sách quy định" Height="450" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="auto"  />
+            <RowDefinition Height="auto"  />
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"  />
+            <RowDefinition  />
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" x:Name="TenCS" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,10" Height="30" FontSize="22" FontWeight="Bold"/>
+        <DataGrid x:Name="dtgCTCS" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="170" Margin="10,0,10,10" AutoGenerateColumns="False" SelectedCellsChanged="dtgCTCS_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding DK}" Width="*"/>
+                <DataGridTextColumn Binding="{Binding KL}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label  Grid.Column="0" Grid.Row="2" Content="Đối tượng/ Điều kiện:" Margin="10,0,10,0" Height="35" FontSize="16" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDK" Grid.Column="1" Grid.Row="2" Height="60" Margin="10,0,10,10" TextWrapping="Wrap"/>
+        <Label  Grid.Column="0" Grid.Row="3" Content="Kết luận:" Margin="10,0,10,10" Height="30" FontSize="16" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtKL" Grid.Column="1" Grid.Row="3" Height="60" Margin="10,0,10,10" TextWrapping="Wrap"/>
+        <StackPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button x:Name="CLear" Content="Clear" Width="100" Height="30" Margin="10,10,10,0" Click="CLear_Click"/>
+            <Button x:Name="AddCT" Content="Thêm" Width="100" Height="30" Margin="10,10,10,0" Click="AddCT_Click"/>
+            <Button x:Name="AddEdit" Content="Sửa" Width="100" Height="30" Margin="10,10,10,0" Click="Edit_Click"/>
+            <Button x:Name="AddDelete" Content="Xóa" Width="100" Height="30" Margin="10,10,10,0" Click="Delete_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
